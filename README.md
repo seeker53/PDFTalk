@@ -40,10 +40,41 @@
 3. Set up your environment variables in the `.env` file:
 
    ```bash
-   MONGODB_URI=your_mongodb_connection_string
-   RESEND_API_KEY=your_resend_api_key
-   NEXTAUTH_SECRET=any_secret_value_of_your_choice
-   CLERK_API_KEY=your_clerk_api_key
+   # Together AI API Key
+TOGETHER_AI_API_KEY=your_together_ai_api_key
+
+# Bytescale API Key
+NEXT_PUBLIC_BYTESCALE_API_KEY=your_bytescale_api_key
+
+# Vector store configuration
+NEXT_PUBLIC_VECTORSTORE="pinecone"  # or "mongodb"
+
+# Pinecone configuration (if using Pinecone as the vector store)
+PINECONE_API_KEY=your_pinecone_api_key
+PINECONE_INDEX_NAME=your_pinecone_index_name
+
+# MongoDB Atlas configuration (if using MongoDB as the vector store)
+MONGODB_ATLAS_URI=your_mongodb_atlas_uri
+MONGODB_ATLAS_DB_NAME=your_mongodb_atlas_db_name
+MONGODB_ATLAS_COLLECTION_NAME=your_mongodb_atlas_collection_name
+MONGODB_ATLAS_INDEX_NAME=your_mongodb_atlas_index_name
+
+# Clerk API keys for authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+# PostgreSQL configuration
+POSTGRES_URL=your_postgres_url
+POSTGRES_URL_NON_POOLING=your_non_pooling_postgres_url
+POSTGRES_PRISMA_URL=your_postgres_prisma_url
+
+# Optional LangChain tracing for debugging
+LANGCHAIN_TRACING_V2=true  # set to true if using LangChain's tracing service
+LANGCHAIN_API_KEY=your_langchain_api_key
+LANGCHAIN_SESSION=pdftochat  # set your LangChain session name
+
    ```
 
 4. Generate Prisma client:
